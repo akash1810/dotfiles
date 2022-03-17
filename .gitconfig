@@ -1,0 +1,31 @@
+[user]
+	name = Akash Askoolum
+	email = akash1810@gmail.com
+[github]
+	user = akash1810
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/akash_askoolum/.gitignore_global
+	editor = sublime -w
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[alias]
+        glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+        # No need for a GUI - a nice, colorful, graphical representation
+        # https://git-scm.com/docs/git-log
+        # via https://medium.com/@payload.dd/thanks-for-the-git-st-i-will-use-this-4da5839a21a4
+
+        pushf = push --force-with-lease
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[commit]
+	verbose = true
+	template = /Users/akash_askoolum/.gitmessage
