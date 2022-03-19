@@ -109,6 +109,7 @@ alias cdk="npx cdk --path-metadata false --version-reporting false "
 alias vpn="sudo openconnect --reconnect-timeout 0 --user akash_askoolum https://digivpn.theguardian.com "
 alias curl-timed="curl --write-out %{time_total}\\n --output /dev/null --silent "
 alias gu-cdk="npx @guardian/cdk@latest "
+alias brew-dump="brew bundle dump --file=~/.homebrew/Brewfile --force"
 
 . $(brew --prefix asdf)/asdf.sh
 . $HOME/.asdf/plugins/java/set-java-home.zsh
