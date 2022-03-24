@@ -9,7 +9,7 @@
 	helper = osxkeychain
 [core]
 	excludesfile = /Users/akash_askoolum/.gitignore_global
-	editor = sublime -w
+	editor = subl -w
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
