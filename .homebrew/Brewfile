@@ -1,25 +1,43 @@
-tap "guardian/devtools"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+
+# Guardian tooling
+tap "guardian/devtools"
+brew "guardian/devtools/dev-nginx"
+cask "gu-base"
+cask "gu-scala"
+cask "session-manager-plugin" # transitive from gu-ssm, which is transitive from gu-base
+
+# Browsers
+cask "google-chrome"
+cask "opera-developer"
+
+# IDEs
+cask "intellij-idea"
+cask "visual-studio-code"
+cask "sublime-text"
+
+# Programming tools
 brew "asdf"
-brew "exiftool"
-brew "gd"
 brew "gh"
+cask "charles"
+cask "docker"
+cask "iterm2"
+cask "gpg-suite"
+
+# Image tooling
+brew "exiftool"
 brew "graphicsmagick"
 brew "imagemagick"
 brew "pngquant"
-brew "guardian/devtools/dev-nginx"
-cask "docker"
-cask "google-chrome"
-cask "gpg-suite"
-cask "gu-base"
-cask "gu-scala"
-cask "intellij-idea"
-cask "iterm2"
+brew "gd"
+
+# Window management
 cask "keepingyouawake"
 cask "rectangle"
-cask "session-manager-plugin"
-cask "visual-studio-code"
+
+# Messaging
 cask "whatsapp"
