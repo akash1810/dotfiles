@@ -1,5 +1,5 @@
 java corretto-11.0.15.9.1
-nodejs 16.14.2
+nodejs 18.15.0
 ruby 2.7.5
 rust 1.67.0
 
