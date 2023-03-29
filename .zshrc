@@ -110,6 +110,7 @@ alias vpn="sudo openconnect --reconnect-timeout 0 --user akash_askoolum https://
 alias curl-timed="curl --write-out %{time_total}\\n --output /dev/null --silent "
 alias gu-cdk="npx @guardian/cdk@latest "
 alias brew-dump="brew bundle dump --file=~/.homebrew/Brewfile --force"
+alias idea="open -na \"IntelliJ IDEA.app\" --args "
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 . $HOME/.asdf/plugins/java/set-java-home.zsh
