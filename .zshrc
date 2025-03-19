@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/.cargo/bin:$HOME/go/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -10,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,16 +105,18 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias sbt-debug="sbt -jvm-debug 5005 "
 alias pj="npx projen "
 alias cdk="npx cdk --path-metadata false --version-reporting false "
-alias vpn="sudo openconnect --reconnect-timeout 0 --user akash_askoolum https://digivpn.theguardian.com "
-alias curl-timed="curl --write-out %{time_total}\\n --output /dev/null --silent "
+alias npm-cdk="npm --prefix cdk "
 alias gu-cdk="npx @guardian/cdk@latest "
+alias curl-timed="curl --write-out %{time_total}\\n --output /dev/null --silent "
 alias brew-dump="brew bundle dump --file=~/.homebrew/Brewfile --force"
 alias idea="open -na \"IntelliJ IDEA.app\" --args "
-
-. $(brew --prefix asdf)/libexec/asdf.sh
-. $HOME/.asdf/plugins/java/set-java-home.zsh
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
-complete -C '/opt/homebrew/bin/aws_completer' aws
+eval "$(starship init zsh)"
+
+export AWS_PROFILE=deployTools
+export AWS_DEFAULT_REGION=eu-west-1
+export AWS_REGION=eu-west-1
+
